@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // js 
+        // js 是编程语言有很强的逻辑性在里面： 实现这个需求的思路 先怎么做后怎么做。
+        // 1.需一个临时变量
+        // 2.把 apple1 给临时变量temp
+        // 3.把 apple2 里面的苹果给 apple1
+        // 4.把 临时变量里的值给 apple2
+
+        var temp; // 声明了一个临时变量为空
+        var apple1 = '青苹果';
+        var apple2 = '红苹果';
+        temp = apple1;
+        apple1 = apple2;
+        apple2 = temp;
+        // apple1, apple2 = apple2, apple1;
+        console.log(apple1, apple2);
+        // console.log(apple2);
+
+
+        // 方法2 ES6的解构赋值语法
+        // https://blog.csdn.net/ccssr/article/details/125482721
+        var apple1 = '青苹果';
+        var apple2 = '红苹果';
+        [apple1, apple2] = [apple2, apple1];
+        console.log(apple1, apple2)
     </script>
 </head>
 <body>
